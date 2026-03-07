@@ -99,7 +99,6 @@ coverage.xml
 # PostgreSQL data directory
 pgdata/
 postgres-data/
-data/
 
 # PostgreSQL logs
 pg_log/
