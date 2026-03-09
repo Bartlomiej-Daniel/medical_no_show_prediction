@@ -92,7 +92,6 @@ coverage.xml
 # =========================
 
 # Database dumps
-*.sql
 *.dump
 *.backup
 
