@@ -36,8 +36,9 @@ x_test.to_csv(data_file / "x_test.csv", index=False)
 y_test.to_csv(data_file / "y_test.csv", index=False)
 
 model = RandomForestClassifier(
-    n_estimators=200,
-    random_state=42
+    n_estimators=300,
+    random_state=42,
+    class_weight="balanced"
     )
 
 model.fit(x_train, y_train)
