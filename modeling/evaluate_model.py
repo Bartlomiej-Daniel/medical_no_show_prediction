@@ -1,7 +1,8 @@
 import pandas as pd
 import joblib
 import matplotlib.pyplot as plt
-from sklearn.metrics import classification_report
+import seaborn as sns
+from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
 from pathlib import Path
 
@@ -35,7 +36,7 @@ importance_df.to_csv(
     reports_dir/ "tables" / "feature_importance.csv",
     index=False
 )
-
+    
 plt.figure(figsize=(10,6))
 plt.barh(importance_df["feature"], importance_df["importance"])
 plt.gca().invert_yaxis()
@@ -43,5 +44,25 @@ plt.gca().invert_yaxis()
 plt.title("Feature importance for prediction no-show")
 plt.xlabel("Importance")
 plt.savefig(reports_dir/ "figures" / "feature_importance.png", bbox_inches="tight")
+plt.show()
+
+cm = confusion_matrix(y_test, y_pred)
+
+plt.figure(figsize=(6,5))
+
+sns.heatmap(
+    cm,
+    annot=True,
+    fmt="d",
+    cmap="Blues",
+    xticklabels=["Show", "No-show"],
+    yticklabels=["Show", "No-show"]
+)
+
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
+plt.title("Confusion Matrix")
+
+plt.savefig(reports_dir/ "figures" / "confusion_matrix.png", bbox_inches="tight")
 plt.show()
 
