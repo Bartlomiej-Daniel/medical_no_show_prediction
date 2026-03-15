@@ -32,19 +32,19 @@ importance_df = pd.DataFrame({
 importance_df = importance_df.sort_values("importance", ascending=False)
 
 print(importance_df)
-"""
+
 importance_df.to_csv(
     reports_dir/ "tables" / "feature_importance.csv",
     index=False
 )
-   """ 
+  
 plt.figure(figsize=(10,6))
 plt.barh(importance_df["feature"], importance_df["importance"])
 plt.gca().invert_yaxis()
 
 plt.title("Feature importance for prediction no-show")
 plt.xlabel("Importance")
-#plt.savefig(reports_dir/ "figures" / "feature_importance.png", bbox_inches="tight")
+plt.savefig(reports_dir/ "figures" / "feature_importance.png", bbox_inches="tight")
 plt.show()
 
 # confusion matrix
@@ -65,7 +65,7 @@ plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.title("Confusion Matrix")
 
-#plt.savefig(reports_dir/ "figures" / "confusion_matrix.png", bbox_inches="tight")
+plt.savefig(reports_dir/ "figures" / "confusion_matrix.png", bbox_inches="tight")
 plt.show()
 
 # roc curve

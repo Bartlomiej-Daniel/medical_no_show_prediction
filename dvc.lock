@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/processed/features.csv
       hash: md5
-      md5: e1d9b5e0a908af0c6d9d06d089eb4627
-      size: 10709964
+      md5: 666806a04f7a73e5ef7e02f0e5e8327e
+      size: 6895273
     - path: modeling/train_model.py
       hash: md5
       md5: 1647baf153b98453dbf272a6136cf014
