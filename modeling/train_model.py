@@ -32,6 +32,9 @@ x_train, x_test, y_train, y_test = train_test_split(
     random_state=42
     )
 
+x_train.to_csv(data_file / "x_train.csv", index=False)
+y_train.to_csv(data_file / "y_train.csv", index=False)
+
 x_test.to_csv(data_file / "x_test.csv", index=False)
 y_test.to_csv(data_file / "y_test.csv", index=False)
 
