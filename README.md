@@ -91,7 +91,7 @@ requirements.txt
 
 # Data Pipeline
 
-## 1 ETL
+## ETL
 
 Raw dataset is loaded and stored in a PostgreSQL database.
 
@@ -241,13 +241,13 @@ Waiting time before appointment was the strongest predictor of missed visits.
 
 # Key Insights
 
-1️⃣ Around **20% of appointments are missed**.
+1️ Around **20% of appointments are missed**.
 
-2️⃣ **Long waiting times significantly increase no-show probability.**
+2️ **Long waiting times significantly increase no-show probability.**
 
-3️⃣ **Same-day appointments have the lowest no-show rate.**
+3️ **Same-day appointments have the lowest no-show rate.**
 
-4️⃣ SMS reminders have a small but measurable effect.
+4️ SMS reminders have a small but measurable effect.
 
 ---
 
